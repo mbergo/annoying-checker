@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Real-Time Grammar Checker",
+    "description": "Verifies the grammar of text being typed in the browser in real time",
+    "version": "1.0",
+    "permissions": ["tabs", "https://api.grammarly.com/", "override_pages"],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
